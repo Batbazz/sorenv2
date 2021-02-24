@@ -4,12 +4,17 @@
     <title>Sorenv2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     />
   </head>
 
   <body>
+    <%= render 'layouts/flashes' %>
     <%= yield %>
+    <script <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'%> ></script>
+    <script <%= javascript_pack_tag 'anim', 'data-turbolinks-track': 'reload'%> ></script>
+    <script <%= javascript_pack_tag 'mailicon', 'data-turbolinks-track': 'reload'%> ></script>
   </body>
 </html>
